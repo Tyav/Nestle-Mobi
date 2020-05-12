@@ -11,4 +11,6 @@
     <string name="present_date">May 6, 2020</string>
     <string name="sales_this_month">137 Cups this month</string>
     <string name="vendor_name">Tolulope Adesina</string>
+    <string name="search_vendors">Search vendors</string>
+    <string name="get_vendors">vendors</string>
 </resources>
