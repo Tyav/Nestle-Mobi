@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NescafeKitchen">
+
+    <include
+        android:id="@+id/kitchenToolbar"
+        layout="@layout/toolbar1_layout"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/kitchenToolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        >
+
+        <TextView
+            android:id="@+id/screenHeadingKitchen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coustard"
+            android:text="@string/kitchen_screen_heading"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/screen_heading_size"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="6dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/myLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/screenHeadingKitchen"
+            android:layout_alignParentStart="true"
+            android:padding="4dp"
+            >
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:contentDescription="@string/cd_location_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_on"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                />
+            <TextView
+                android:id="@+id/myPresentLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/locationIcon"
+                android:layout_alignParentTop="true"
+                android:text="@string/my_present_location"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="4dp"
+                />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/todaysDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/screenHeadingKitchen"
+            android:layout_toEndOf="@id/myLocation"
+            android:padding="4dp"
+            android:layout_marginStart="8dp"
+            >
+            <ImageView
+                android:id="@+id/dateImage"
+                android:contentDescription="@string/cd_todaysDateImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_calendar1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                />
+            <TextView
+                android:id="@+id/presentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/dateImage"
+                android:layout_alignParentTop="true"
+                android:text="@string/present_date"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="4dp"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
