@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Nescafe_pushcart</string>
 
-   
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cd_logo">logo</string>
     <string name="kitchen_screen_heading">Nescafe Kitchen</string>
@@ -9,4 +9,6 @@
     <string name="my_present_location">Ikeja, Lagos State</string>
     <string name="cd_todaysDateImage">Date Image</string>
     <string name="present_date">May 6, 2020</string>
+    <string name="sales_this_month">137 Cups this month</string>
+    <string name="vendor_name">Tolulope Adesina</string>
 </resources>

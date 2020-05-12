@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:id="@+id/vendorinkitchen"
@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -29,8 +30,30 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_toEndOf="@id/vendorinkitchen"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:background="@drawable/bg_border_vk"
+        android:layout_margin="8dp"
         >
+
+        <TextView
+            android:id="@+id/vendorFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/coustard"
+            android:text="@string/vendor_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vendorFullName"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/sales_this_month"
+            />
 
 
 
