@@ -13,4 +13,8 @@
     <string name="vendor_name">Tolulope Adesina</string>
     <string name="search_vendors">Search vendors</string>
     <string name="get_vendors">vendors</string>
+    <string name="cd_back_arrow_nav">Back Navigation</string>
+    <string name="pushcart_vendor">Pushcart Vendor</string>
+    <string name="cd_vp_more_menu_icon">More Menu Icon</string>
+
 </resources>
