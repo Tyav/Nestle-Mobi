@@ -33,12 +33,12 @@
         android:id="@+id/password_textInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:theme="@style/EditTextHint"
         android:layout_marginTop="10dp"
-        app:passwordToggleEnabled="true"
+        android:theme="@style/EditTextHint"
         app:layout_constraintEnd_toEndOf="@+id/email_textInputLayout"
         app:layout_constraintStart_toStartOf="@+id/email_textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/email_textInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/email_textInputLayout"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_edit_text"
@@ -46,58 +46,46 @@
             android:layout_height="wrap_content"
             android:hint="@string/password_hint"
             android:inputType="textPassword"
-            android:paddingTop="25dp"
-            />
+            android:paddingTop="25dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="60dp"
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="352dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/button_bg"
-        android:gravity="center"
+        android:drawableEnd="@drawable/ic_trending_flat"
+        android:drawablePadding="4dp"
+        android:gravity="end|center"
+        android:paddingStart="4dp"
+        android:paddingEnd="148dp"
+        android:text="@string/log_in_text"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="@+id/password_textInputLayout"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="@+id/password_textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/password_textInputLayout">
-
-        <TextView
-            android:id="@+id/login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/log_in_text"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_toEndOf="@id/login"
-            android:backgroundTint="@android:color/white"
-            android:contentDescription="@string/right_arrow_logo"
-            android:src="@drawable/ic_trending_flat" />
-    </RelativeLayout>
+        app:layout_constraintTop_toBottomOf="@+id/password_textInputLayout" />
 
     <TextView
         android:id="@+id/issues"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:text="@string/sign_in_issues"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/login_btn" />
 
     <TextView
         android:id="@+id/reset_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/reset_password"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
