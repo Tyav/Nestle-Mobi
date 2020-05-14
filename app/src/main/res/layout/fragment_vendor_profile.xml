@@ -45,17 +45,21 @@
                     android:layout_height="match_parent"
                     android:layout_below="@id/vendorNameDisplay"
                     android:layout_alignParentStart="true"
-                    android:padding="8dp"
-                    >
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp">
+
                     <ImageView
                         android:id="@+id/totalSoldImageId"
-                        android:contentDescription="@string/cd_total_sold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_totalsales"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        />
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="20dp"
+                        android:contentDescription="@string/cd_total_sold"
+                        android:src="@drawable/ic_totalsales" />
 
                     <TextView
                         android:id="@+id/totalSoldHeading"
@@ -78,8 +82,6 @@
                         android:textSize="@dimen/total_sold_count" />
 
 
-
-
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -87,24 +89,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_below="@id/vendorNameDisplay"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="0dp"
                     android:layout_toEndOf="@id/totalSoldId"
-                    android:padding="8dp"
-                    >
+                    android:padding="8dp">
 
                     <ImageView
                         android:id="@+id/thisMonthImageId"
-                        android:contentDescription="@string/cd_this_month"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_thismonth"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        />
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="4dp"
+                        android:contentDescription="@string/cd_this_month"
+                        android:src="@drawable/ic_thismonth" />
 
                     <TextView
                         android:id="@+id/thisMonthDisplayHeading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
                         android:layout_toEndOf="@id/thisMonthImageId"
                         android:fontFamily="@font/muli"
                         android:text="@string/this_month_display_tag"
@@ -115,6 +121,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/thisMonthDisplayHeading"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="-1dp"
                         android:layout_toEndOf="@id/thisMonthImageId"
                         android:fontFamily="@font/muli_semibold"
                         android:text="@string/this_month"
