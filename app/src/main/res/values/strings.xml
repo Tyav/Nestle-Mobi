@@ -13,4 +13,20 @@
     <string name="vendor_name">Tolulope Adesina</string>
     <string name="search_vendors">Search vendors</string>
     <string name="get_vendors">vendors</string>
+    <string name="cd_back_arrow_nav">Back Navigation</string>
+    <string name="pushcart_vendor">Pushcart Vendor</string>
+    <string name="cd_vp_more_menu_icon">More Menu Icon</string>
+    <string name="cd_total_sold">Total Sold Image</string>
+    <string name="cd_this_month">Sales This Month</string>
+    <string name="total_sold">Total Sold</string>
+    <string name="total_sold_count">2,330 cups</string>
+    <string name="this_month">137 cups</string>
+    <string name="this_month_display_tag">This month</string>
+    <string name="date">Date</string>
+    <string name="number_of_sales">Sales</string>
+    <string name="date_in_digit">01</string>
+    <string name="month_type">Apr</string>
+    <string name="no_number_of_cups_sold">No Cups sold</string>
+
+
 </resources>

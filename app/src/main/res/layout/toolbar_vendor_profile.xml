@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:layout_collapseMode="pin"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageButton
+            android:id="@+id/vendorProfileBackNav"
+            android:contentDescription="@string/cd_back_arrow_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_backspace"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <TextView
+            android:id="@+id/vendorProfileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="91dp"
+            android:layout_marginTop="11dp"
+            android:layout_toEndOf="@id/vendorProfileBackNav"
+            android:fontFamily="@font/muli"
+            android:text="@string/pushcart_vendor"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/vpMoreMenu"
+            android:contentDescription="@string/cd_vp_more_menu_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_menu"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/vendorProfileTitle"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="8dp"
+            android:paddingStart="84dp"
+            android:paddingEnd="1dp"
+
+            />
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

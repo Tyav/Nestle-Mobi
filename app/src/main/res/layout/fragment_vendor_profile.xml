@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.VendorProfile">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimary"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            >
+            <RelativeLayout
+                android:id="@+id/imageDisplayForTheCollapsableToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                app:layout_collapseMode="parallax"
+
+                >
+
+                <TextView
+                    android:id="@+id/vendorNameDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/muli_bold"
+                    android:gravity="center"
+                    android:text="@string/vendor_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/vendor_name_vp_size"
+                    android:layout_marginTop="43dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/totalSoldId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/vendorNameDisplay"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/totalSoldImageId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="20dp"
+                        android:contentDescription="@string/cd_total_sold"
+                        android:src="@drawable/ic_totalsales" />
+
+                    <TextView
+                        android:id="@+id/totalSoldHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/totalSoldImageId"
+                        android:fontFamily="@font/muli"
+                        android:text="@string/total_sold"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/totalSoldCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/totalSoldHeading"
+                        android:layout_toEndOf="@id/totalSoldImageId"
+                        android:fontFamily="@font/muli_semibold"
+                        android:text="@string/total_sold_count"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/total_sold_count" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/thiMonthCarrierId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/vendorNameDisplay"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@id/totalSoldId"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/thisMonthImageId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="4dp"
+                        android:contentDescription="@string/cd_this_month"
+                        android:src="@drawable/ic_thismonth" />
+
+                    <TextView
+                        android:id="@+id/thisMonthDisplayHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_toEndOf="@id/thisMonthImageId"
+                        android:fontFamily="@font/muli"
+                        android:text="@string/this_month_display_tag"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/thisMonthCountDisplay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/thisMonthDisplayHeading"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="-1dp"
+                        android:layout_toEndOf="@id/thisMonthImageId"
+                        android:fontFamily="@font/muli_semibold"
+                        android:text="@string/this_month"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/total_sold_count" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/toolbarInsideCollapsingToolbar"
+                layout="@layout/toolbar_vendor_profile"/>
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <RelativeLayout
+            android:id="@+id/supportingParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/secondChildViewFromSpl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calendarView"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/titleForRecyclerviewItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    >
+
+                    <TextView
+                        android:id="@+id/titleIsDateId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/muli"
+                        android:padding="4dp"
+                        android:text="@string/date"
+                        android:textSize="@dimen/recyclerview_title" />
+
+                    <TextView
+                        android:id="@+id/titleIsSales"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@id/titleIsDateId"
+                        android:fontFamily="@font/muli"
+                        android:padding="4dp"
+                        android:text="@string/number_of_sales"
+                        android:textSize="@dimen/recyclerview_title" />
+
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@+id/recyclerviewAndProgressbarHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/titleForRecyclerviewItem"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="4dp"
+                    >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/vendorProfileRecyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/item_list_sales_record"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/vendorProfileProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="invisible"
+                        tools:visibility="visible"
+                        />
+
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/thisFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/nestedScrollViewId"
+        app:layout_anchorGravity="bottom|right|end"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_add_white"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        android:elevation="6dp"
+        />
+
+
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

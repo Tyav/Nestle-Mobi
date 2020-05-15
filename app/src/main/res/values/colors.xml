@@ -3,4 +3,8 @@
     <color name="colorPrimary">#161616</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#d0181f</color>
+    <color name="fab_color">#ce1f16</color>
+    <color name="circle_shaped">#df1d1a</color>
+    <color name="sales_record_stroke">#707070</color>
+    <color name="no_of_cups_sold">#d6b7b7</color>
 </resources>
