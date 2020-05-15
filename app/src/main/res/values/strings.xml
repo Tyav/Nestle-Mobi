@@ -24,6 +24,8 @@
     <string name="this_month_display_tag">This month</string>
     <string name="date">Date</string>
     <string name="number_of_sales">Sales</string>
+    <string name="date_in_digit">01</string>
+    <string name="month_type">Apr</string>
 
 
 </resources>
