@@ -3,4 +3,5 @@
     <dimen name="screen_heading_size">24sp</dimen>
     <dimen name="vendor_name_vp_size">24sp</dimen>
     <dimen name="total_sold_count">18sp</dimen>
+    <dimen name="recyclerview_title">18sp</dimen>
 </resources>

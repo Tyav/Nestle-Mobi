@@ -180,6 +180,49 @@
                 android:layout_below="@id/calendarView"
                 >
 
+                <RelativeLayout
+                    android:id="@+id/titleForRecyclerviewItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    >
+
+                    <TextView
+                        android:id="@+id/titleIsDateId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/muli"
+                        android:text="@string/date"
+                        android:textSize="@dimen/recyclerview_title"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:padding="4dp"
+                        android:layout_marginStart="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/titleIsSales"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_toEndOf="@id/titleIsDateId"
+                        android:fontFamily="@font/muli"
+                        android:text="@string/number_of_sales"
+                        android:textSize="@dimen/recyclerview_title"
+                        android:padding="4dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        />
+
+
+
+
+                </RelativeLayout>
+
             </RelativeLayout>
 
 
