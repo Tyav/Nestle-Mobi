@@ -194,32 +194,33 @@
                         android:id="@+id/titleIsDateId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/muli"
-                        android:text="@string/date"
-                        android:textSize="@dimen/recyclerview_title"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentBottom="true"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/muli"
                         android:padding="4dp"
-                        android:layout_marginStart="20dp"
-                        />
+                        android:text="@string/date"
+                        android:textSize="@dimen/recyclerview_title" />
 
                     <TextView
                         android:id="@+id/titleIsSales"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:layout_toEndOf="@id/titleIsDateId"
-                        android:fontFamily="@font/muli"
-                        android:text="@string/number_of_sales"
-                        android:textSize="@dimen/recyclerview_title"
-                        android:padding="4dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        />
-
-
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@id/titleIsDateId"
+                        android:fontFamily="@font/muli"
+                        android:padding="4dp"
+                        android:text="@string/number_of_sales"
+                        android:textSize="@dimen/recyclerview_title" />
 
 
                 </RelativeLayout>
@@ -238,7 +239,9 @@
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/vendorProfileRecyclerview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/item_list_sales_record"
+                        />
 
                     <ProgressBar
                         android:id="@+id/vendorProfileProgressBar"
