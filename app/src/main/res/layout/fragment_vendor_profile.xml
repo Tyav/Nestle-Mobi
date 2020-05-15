@@ -223,6 +223,19 @@
 
                 </RelativeLayout>
 
+                <FrameLayout
+                    android:id="@+id/recyclerviewAndProgressbarHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/titleForRecyclerviewItem"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    >
+
+
+                </FrameLayout>
+
+
             </RelativeLayout>
 
 
