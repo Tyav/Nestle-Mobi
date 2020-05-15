@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    >
 
 
     <RelativeLayout
@@ -16,23 +17,25 @@
             android:id="@+id/dayInDigit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/muli_bold"
-            android:text="@string/date_in_digit"
-            android:textSize="@dimen/date_in_digit_size"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            />
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/muli_bold"
+            android:text="@string/date_in_digit"
+            android:textSize="@dimen/date_in_digit_size" />
 
         <TextView
             android:id="@+id/monthType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/muli"
-            android:text="@string/month_type"
             android:layout_below="@id/dayInDigit"
             android:layout_alignParentStart="true"
-            />
-
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="-2dp"
+            android:fontFamily="@font/muli"
+            android:text="@string/month_type"
+            android:textSize="@dimen/month_in_date_text_size" />
 
 
     </RelativeLayout>
@@ -42,10 +45,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
         android:layout_toEndOf="@id/dateDisplay"
         android:background="@drawable/circle_shaped_item">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/numberOfSales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@id/dateMaker"
+        android:background="@drawable/bg_no_of_cups_sold">
+
+        <TextView
+            android:id="@+id/cupSoldCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="-1dp"
+            android:fontFamily="@font/muli_semibold"
+            android:padding="8dp"
+            android:text="@string/no_number_of_cups_sold"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/no_cups_sold_record_size" />
+
 
     </RelativeLayout>
 

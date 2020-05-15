@@ -6,4 +6,5 @@
     <color name="fab_color">#ce1f16</color>
     <color name="circle_shaped">#df1d1a</color>
     <color name="sales_record_stroke">#707070</color>
+    <color name="no_of_cups_sold">#d6b7b7</color>
 </resources>

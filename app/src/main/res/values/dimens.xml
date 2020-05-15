@@ -4,5 +4,7 @@
     <dimen name="vendor_name_vp_size">24sp</dimen>
     <dimen name="total_sold_count">18sp</dimen>
     <dimen name="recyclerview_title">18sp</dimen>
-    <dimen name="date_in_digit_size">24sp</dimen>
+    <dimen name="date_in_digit_size">20sp</dimen>
+    <dimen name="no_cups_sold_record_size">18sp</dimen>
+    <dimen name="month_in_date_text_size">12sp</dimen>
 </resources>

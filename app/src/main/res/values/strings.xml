@@ -26,6 +26,7 @@
     <string name="number_of_sales">Sales</string>
     <string name="date_in_digit">01</string>
     <string name="month_type">Apr</string>
+    <string name="no_number_of_cups_sold">No Cups sold</string>
 
 
 </resources>
