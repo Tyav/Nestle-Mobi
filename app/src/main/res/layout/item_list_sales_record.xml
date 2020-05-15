@@ -37,5 +37,17 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/dateMaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@id/dateDisplay"
+        android:background="@drawable/circle_shaped_item">
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
