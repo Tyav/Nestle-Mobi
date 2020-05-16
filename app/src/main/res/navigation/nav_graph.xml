@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.nescafe_pushcart.LoginFragment"
+        android:name="com.example.nescafe_pushcart.ui.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <fragment
@@ -20,4 +20,9 @@
         android:name="com.example.nescafe_pushcart.ui.VendorProfile"
         android:label="fragment_vendor_profile"
         tools:layout="@layout/fragment_vendor_profile" />
+    <fragment
+        android:id="@+id/vendorAuthFragment"
+        android:name="com.example.nescafe_pushcart.VendorAuthFragment"
+        android:label="fragment_vendor_auth"
+        tools:layout="@layout/fragment_vendor_auth" />
 </navigation>

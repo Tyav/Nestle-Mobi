@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_color"
-    tools:context=".LoginFragment">
+    tools:context=".ui.LoginFragment">
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -53,7 +53,6 @@
         android:layout_width="352dp"
         android:layout_height="65dp"
         android:layout_marginTop="70dp"
-        android:background="@color/colorAccent"
         android:drawableEnd="@drawable/ic_trending_flat"
         android:drawablePadding="4dp"
         android:gravity="end|center"
@@ -62,7 +61,7 @@
         android:text="@string/log_in_text"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        app:cornerRadius="10dp"
+        app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="@+id/password_textInputLayout"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="@+id/password_textInputLayout"
