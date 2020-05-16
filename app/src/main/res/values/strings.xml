@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Nescafe_pushcart</string>
 
-
     <string name="cd_logo">logo</string>
     <string name="kitchen_screen_heading">Nescafe Kitchen</string>
     <string name="cd_location_logo">Location Logo</string>
@@ -26,9 +25,6 @@
     <string name="date_in_digit">01</string>
     <string name="month_type">Apr</string>
     <string name="no_number_of_cups_sold">No Cups sold</string>
-
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="email_address_hint">Email address</string>
     <string name="password_hint">Password</string>
     <string name="sign_in_issues">Sign in issues?</string>
