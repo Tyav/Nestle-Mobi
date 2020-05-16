@@ -53,7 +53,7 @@
         android:layout_width="352dp"
         android:layout_height="65dp"
         android:layout_marginTop="70dp"
-        android:background="@drawable/button_bg"
+        android:background="@color/colorAccent"
         android:drawableEnd="@drawable/ic_trending_flat"
         android:drawablePadding="4dp"
         android:gravity="end|center"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="@string/sign_in_issues"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/whiteColor"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="@string/reset_password"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/whiteColor"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/issues"
         app:layout_constraintHorizontal_bias="0.522"
@@ -104,6 +104,5 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
