@@ -10,4 +10,14 @@
         android:name="com.example.nescafe_pushcart.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/nescafeKitchen"
+        android:name="com.example.nescafe_pushcart.ui.NescafeKitchen"
+        android:label="fragment_nescafe_kitchen"
+        tools:layout="@layout/fragment_nescafe_kitchen" />
+    <fragment
+        android:id="@+id/vendorProfile"
+        android:name="com.example.nescafe_pushcart.ui.VendorProfile"
+        android:label="fragment_vendor_profile"
+        tools:layout="@layout/fragment_vendor_profile" />
 </navigation>
