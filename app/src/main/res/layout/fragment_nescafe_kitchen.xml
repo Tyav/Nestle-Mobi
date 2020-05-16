@@ -17,7 +17,7 @@
         android:layout_below="@id/kitchenToolbar"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         >
