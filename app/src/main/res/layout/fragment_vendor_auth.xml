@@ -7,28 +7,37 @@
     android:layout_height="match_parent"
     tools:context=".VendorAuthFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
+        android:id="@+id/blackLayout"
+        android:background="@color/colorPrimaryDark"
         android:layout_width="0dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/vendor_auth_toolbar"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:layout_collapseMode="pin"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/close_text"
-            android:textAlignment="textEnd"
-            android:textColor="@android:color/black" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/vendor_auth_toolbar"
+            >
 
-    </androidx.appcompat.widget.Toolbar>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/close_text"
+                android:textSize="@dimen/close_btn_size"
+                android:textColor="@android:color/black" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
@@ -39,7 +48,7 @@
         android:src="@drawable/whiteLogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/blackLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
@@ -78,8 +87,9 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/button2"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="65dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/button_bg"
         android:drawableEnd="@drawable/ic_trending_flat"
