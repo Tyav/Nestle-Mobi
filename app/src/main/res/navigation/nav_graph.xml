@@ -25,4 +25,9 @@
         android:name="com.example.nescafe_pushcart.ui.VendorAuthFragment"
         android:label="fragment_vendor_auth"
         tools:layout="@layout/fragment_vendor_auth" />
+    <fragment
+        android:id="@+id/newSalesFragment"
+        android:name="com.example.nescafe_pushcart.NewSalesFragment"
+        android:label="fragment_new_sales"
+        tools:layout="@layout/fragment_new_sales" />
 </navigation>
