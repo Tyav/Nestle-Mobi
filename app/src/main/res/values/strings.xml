@@ -32,8 +32,15 @@
     <string name="logo_description">logo</string>
     <string name="log_in_text">Log In</string>
     <string name="right_arrow_logo">right_arrow</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="close_text">Close</string>
+    <string name="add_sales_txt">Add sales</string>
+    <string name="today_txt">Today,</string>
+    <string name="date_text">
+        <u>April 7 2020</u>
+    </string>
+    <string name="i_sold_text">I sold</string>
+    <string name="cups_text">Cups</string>
+    <string name="of_nescafe_coffee_text">of Nescafe Coffee</string>
+    <string name="sales_hint">10</string>
+    <string name="add_to_your_records">Add to your records</string>
 </resources>

@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:contentDescription="@string/logo_description"
-        android:src="@drawable/whiteLogo"
+        android:src="@drawable/white_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/blackLayout" />
