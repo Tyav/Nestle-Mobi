@@ -43,4 +43,6 @@
     <string name="of_nescafe_coffee_text">of Nescafe Coffee</string>
     <string name="sales_hint">10</string>
     <string name="add_to_your_records">Add to your records</string>
+    <string name="login_in">Log In</string>
+    <string name="nescafe_logo">logo</string>
 </resources>
