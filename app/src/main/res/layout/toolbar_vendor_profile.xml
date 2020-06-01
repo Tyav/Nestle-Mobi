@@ -9,52 +9,54 @@
     app:layout_collapseMode="pin"
     >
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
-        <ImageButton
+        <ImageView
             android:id="@+id/vendorProfileBackNav"
-            android:contentDescription="@string/cd_back_arrow_nav"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/cd_back_arrow_nav"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:src="@drawable/ic_keyboard_backspace"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             />
 
         <TextView
             android:id="@+id/vendorProfileTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="91dp"
-            android:layout_marginTop="11dp"
-            android:layout_toEndOf="@id/vendorProfileBackNav"
-            android:fontFamily="@font/muli"
-            android:text="@string/pushcart_vendor"
             android:textAlignment="center"
-            android:textColor="@android:color/white" />
+            android:text="@string/pushcart_vendor"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/muli"
+            app:layout_constraintBottom_toBottomOf="@+id/vendorProfileBackNav"
+            app:layout_constraintEnd_toStartOf="@id/vpMoreMenu"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/vendorProfileBackNav"
+            app:layout_constraintTop_toTopOf="@+id/vendorProfileBackNav"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/vpMoreMenu"
-            android:contentDescription="@string/cd_vp_more_menu_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/cd_vp_more_menu_icon"
             android:src="@drawable/ic_more_menu"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@id/vendorProfileTitle"
-            android:layout_marginTop="11dp"
-            android:layout_marginStart="8dp"
-            android:paddingStart="84dp"
-            android:paddingEnd="1dp"
-
-            />
+            app:layout_constraintBottom_toBottomOf="@+id/vendorProfileTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.909"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@+id/vendorProfileTitle"
+            app:layout_constraintTop_toTopOf="@+id/vendorProfileTitle"
+            app:layout_constraintVertical_bias="0.2" />
 
 
-    </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.appcompat.widget.Toolbar>
