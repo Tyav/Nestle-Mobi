@@ -9,7 +9,14 @@
         android:id="@+id/loginFragment"
         android:name="com.example.nescafe_pushcart.ui.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_nescafeKitchen"
+            app:destination="@id/nescafeKitchen" />
+        <action
+            android:id="@+id/action_loginFragment_to_vendorProfile"
+            app:destination="@id/vendorProfile" />
+    </fragment>
     <fragment
         android:id="@+id/nescafeKitchen"
         android:name="com.example.nescafe_pushcart.ui.NescafeKitchen"
@@ -19,12 +26,20 @@
         android:id="@+id/vendorProfile"
         android:name="com.example.nescafe_pushcart.ui.VendorProfile"
         android:label="fragment_vendor_profile"
-        tools:layout="@layout/fragment_vendor_profile" />
+        tools:layout="@layout/fragment_vendor_profile" >
+        <action
+            android:id="@+id/action_vendorProfile_to_vendorAuthFragment"
+            app:destination="@id/vendorAuthFragment" />
+    </fragment>
     <fragment
         android:id="@+id/vendorAuthFragment"
         android:name="com.example.nescafe_pushcart.ui.VendorAuthFragment"
         android:label="fragment_vendor_auth"
-        tools:layout="@layout/fragment_vendor_auth" />
+        tools:layout="@layout/fragment_vendor_auth" >
+        <action
+            android:id="@+id/action_vendorAuthFragment_to_newSalesFragment"
+            app:destination="@id/newSalesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/newSalesFragment"
         android:name="com.example.nescafe_pushcart.NewSalesFragment"
