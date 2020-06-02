@@ -45,4 +45,17 @@
     <string name="add_to_your_records">Add to your records</string>
     <string name="login_in">Log In</string>
     <string name="nescafe_logo">logo</string>
+    <string name="cd_vendor_verify_logo">Vendor Verify Logo</string>
+    <string name="pin">Pin</string>
+    <string name="add_sales">Add sales</string>
+    <string name="today">Today,</string>
+    <string name="record_date"><u>April 7 2020</u></string>
+    <string name="sold_text_one">I</string>
+    <string name="sold_text_two">sold</string>
+    <string name="sold_text_three">Cups</string>
+    <string name="sold_text_nescafe">of Nescafe Coffee</string>
+    <string name="button_text">Add to your records</string>
+    <string name="cd_record_new_sales_logo">Record new sales image</string>
+    <string name="close_nav">Close</string>
+    <string name="cd_edit_text_hint">10</string>
 </resources>

@@ -11,4 +11,7 @@
     <color name="TodayColor">#626262</color>
     <color name="addRecordBtnColor">#FFE8E8</color>
     <color name="add_records_btn_txt">#898A8D</color>
+    <color name="record_sales_heading">#fffcfc</color>
+    <color name="add_to_your_sales">#ffe8e8</color>
+    <color name="button_add_to_your_sales">#bdbdbd</color>
 </resources>
