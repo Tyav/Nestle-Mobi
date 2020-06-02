@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Nescafe_pushcart</string>
+
+    <string name="cd_logo">logo</string>
+    <string name="kitchen_screen_heading">Nescafe Kitchen</string>
+    <string name="cd_location_logo">Location Logo</string>
+    <string name="my_present_location">Ikeja, Lagos State</string>
+    <string name="cd_todaysDateImage">Date Image</string>
+    <string name="present_date">May 6, 2020</string>
+    <string name="sales_this_month">137 Cups this month</string>
+    <string name="vendor_name">Tolulope Adesina</string>
+    <string name="search_vendors">Search vendors</string>
+    <string name="get_vendors">vendors</string>
+    <string name="cd_back_arrow_nav">Back Navigation</string>
+    <string name="pushcart_vendor">Pushcart Vendor</string>
+    <string name="cd_vp_more_menu_icon">More Menu Icon</string>
+    <string name="cd_total_sold">Total Sold Image</string>
+    <string name="cd_this_month">Sales This Month</string>
+    <string name="total_sold">Total Sold</string>
+    <string name="total_sold_count">2,330 cups</string>
+    <string name="this_month">137 cups</string>
+    <string name="this_month_display_tag">This month</string>
+    <string name="date">Date</string>
+    <string name="number_of_sales">Sales</string>
+    <string name="date_in_digit">01</string>
+    <string name="month_type">Apr</string>
+    <string name="no_number_of_cups_sold">No Cups sold</string>
+    <string name="email_address_hint">Email address</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in_issues">Sign in issues?</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="logo_description">logo</string>
+    <string name="log_in_text">Log In</string>
+    <string name="right_arrow_logo">right_arrow</string>
+    <string name="close_text">Close</string>
+    <string name="add_sales_txt">Add sales</string>
+    <string name="today_txt">Today,</string>
+    <string name="date_text">
+        <u>April 7 2020</u>
+    </string>
+    <string name="i_sold_text">I sold</string>
+    <string name="cups_text">Cups</string>
+    <string name="of_nescafe_coffee_text">of Nescafe Coffee</string>
+    <string name="sales_hint">10</string>
+    <string name="add_to_your_records">Add to your records</string>
+    <string name="login_in">Log In</string>
+    <string name="nescafe_logo">logo</string>
+    <string name="cd_vendor_verify_logo">Vendor Verify Logo</string>
+    <string name="pin">Pin</string>
+    <string name="add_sales">Add sales</string>
+    <string name="today">Today,</string>
+    <string name="record_date"><u>April 7 2020</u></string>
+    <string name="sold_text_one">I</string>
+    <string name="sold_text_two">sold</string>
+    <string name="sold_text_three">Cups</string>
+    <string name="sold_text_nescafe">of Nescafe Coffee</string>
+    <string name="button_text">Add to your records</string>
+    <string name="cd_record_new_sales_logo">Record new sales image</string>
+    <string name="close_nav">Close</string>
+    <string name="cd_edit_text_hint">10</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:layout_collapseMode="pin"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/vendorProfileBackNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/cd_back_arrow_nav"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_keyboard_backspace"
+            />
+
+        <TextView
+            android:id="@+id/vendorProfileTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/pushcart_vendor"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/muli"
+            app:layout_constraintBottom_toBottomOf="@+id/vendorProfileBackNav"
+            app:layout_constraintEnd_toStartOf="@id/vpMoreMenu"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/vendorProfileBackNav"
+            app:layout_constraintTop_toTopOf="@+id/vendorProfileBackNav"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/vpMoreMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/cd_vp_more_menu_icon"
+            android:src="@drawable/ic_more_menu"
+            app:layout_constraintBottom_toBottomOf="@+id/vendorProfileTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.909"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@+id/vendorProfileTitle"
+            app:layout_constraintTop_toTopOf="@+id/vendorProfileTitle"
+            app:layout_constraintVertical_bias="0.2" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>

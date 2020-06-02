@@ -1,0 +1,2 @@
+rootProject.name='Nescafe_pushcart'
+include ':app'

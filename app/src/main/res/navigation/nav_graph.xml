@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.nescafe_pushcart.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_nescafeKitchen"
+            app:destination="@id/nescafeKitchen" />
+        <action
+            android:id="@+id/action_loginFragment_to_vendorProfile"
+            app:destination="@id/vendorProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/nescafeKitchen"
+        android:name="com.example.nescafe_pushcart.ui.NescafeKitchen"
+        android:label="fragment_nescafe_kitchen"
+        tools:layout="@layout/fragment_nescafe_kitchen" />
+    <fragment
+        android:id="@+id/vendorProfile"
+        android:name="com.example.nescafe_pushcart.ui.VendorProfile"
+        android:label="fragment_vendor_profile"
+        tools:layout="@layout/fragment_vendor_profile" >
+        <action
+            android:id="@+id/action_vendorProfile_to_vendorAuthFragment"
+            app:destination="@id/vendorAuthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vendorAuthFragment"
+        android:name="com.example.nescafe_pushcart.ui.VendorAuthFragment"
+        android:label="fragment_vendor_auth"
+        tools:layout="@layout/fragment_vendor_auth" >
+        <action
+            android:id="@+id/action_vendorAuthFragment_to_newSalesFragment"
+            app:destination="@id/newSalesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newSalesFragment"
+        android:name="com.example.nescafe_pushcart.NewSalesFragment"
+        android:label="fragment_new_sales"
+        tools:layout="@layout/fragment_new_sales" />
+</navigation>

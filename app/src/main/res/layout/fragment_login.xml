@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_bg"
+        tools:context=".SignInForNescafe">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/nescafelogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/nescafe_logo"
+                android:src="@drawable/ic_lognescafe"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:theme="@style/EditTextHint"
+                android:layout_weight="0"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:hint="@string/email_address_hint"
+                    android:inputType="textEmailAddress"
+                    android:paddingTop="25dp"
+                    android:textColor="@android:color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:theme="@style/EditTextHint"
+                app:passwordToggleEnabled="true"
+                android:layout_weight="0"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:hint="@string/password_hint"
+                    android:inputType="textPassword"
+                    android:paddingTop="25dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/button_bg"
+                android:drawableEnd="@drawable/ic_trending_flat"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/muli_semibold"
+                android:gravity="center|end"
+                android:paddingStart="4dp"
+                android:paddingEnd="148dp"
+                android:text="@string/login_in"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="48dp"
+                />
+
+            <TextView
+                android:id="@+id/issues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/muli"
+                android:text="@string/sign_in_issues"
+                android:textColor="@color/whiteColor"
+                android:textSize="14sp"
+                android:layout_marginTop="46dp"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:id="@+id/reset_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/muli"
+                android:text="@string/reset_password"
+                android:textColor="@color/whiteColor"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                />
+
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
