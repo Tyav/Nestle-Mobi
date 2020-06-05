@@ -86,22 +86,25 @@ class LoginFragment : Fragment() {
 
         var loginBody = LoginBody()
 
-        when {
-            email_edit_text.editableText.toString().isEmpty() -> {
-                email_edit_text.error = "Email cannot be empty"
-            }
-            InputUtils.validateEmail(email_edit_text.editableText.toString()) -> {
-                email_edit_text.error = "Email not valid"
-            }
-            password_edit_text.editableText.toString().isEmpty() -> {
-                password_edit_text.error = "Password cannot be empty"
-            }
-            else -> {
-                val email = email_edit_text.editableText.toString()
+//        when {
+//            email_edit_text.editableText.toString().isEmpty() -> {
+//                email_edit_text.error = "Email cannot be empty"
+//            }
+//            InputUtils.validateEmail(email_edit_text.editableText.toString()) -> {
+//                email_edit_text.error = "Email not valid"
+//            }
+//            password_edit_text.editableText.toString().isEmpty() -> {
+//                password_edit_text.error = "Password cannot be empty"
+//            }
+//            else -> {
+//                val email = email_edit_text.editableText.toString()
+//                val password = password_edit_text.toString()
+//                loginBody = LoginBody(email, password)
+//            }
+//        }
+        val email = email_edit_text.editableText.toString()
                 val password = password_edit_text.toString()
                 loginBody = LoginBody(email, password)
-            }
-        }
 
         return viewModel.signedIn(loginBody)
 
