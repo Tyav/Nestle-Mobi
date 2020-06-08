@@ -1,12 +1,15 @@
 package com.example.nescafe_pushcart.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -44,17 +47,14 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        login_btn.setOnClickListener {
-//            findNavController().navigate(R.id.action_loginFragment_to_nescafeKitchen)
-//        }
-//
-//        reset_password.setOnClickListener {
-//            findNavController().navigate(R.id.action_loginFragment_to_vendorProfile)
-//        }
+
 
         login_btn.setOnClickListener {
 
+            userLoginProgressBar.visibility = View.VISIBLE
+
             val response = login()
+
 
             response.observe(viewLifecycleOwner, Observer {
 
@@ -62,18 +62,34 @@ class LoginFragment : Fragment() {
                 when(it){
 
                     is Result.Success -> {
-                        findNavController().navigate(R.id.action_loginFragment_to_nescafeKitchen)
+                        userLoginProgressBar.visibility = View.GONE
+                        Toast.makeText(context,"${it.data.message}", Toast.LENGTH_LONG).show()
+                        if(findNavController().currentDestination?.id == R.id.loginFragment){
+                            findNavController().navigate(R.id.action_loginFragment_to_nescafeKitchen)
+                        }
+
+
                     }
                     is Result.Error -> {
+                        userLoginProgressBar.visibility = View.GONE
+                        var status:String? = ""
+                        Log.d(TAG, "check inside exception: ${it.exception.message}")
+//                        if (it.exception.message == "HTTP 422"){
+//                            status = "No record found"
+//                        }
+//                        status = "No record found"
+                        Log.d(TAG, "check here in status:${status}")
                         Toast.makeText(
                             context,
-                            "${it.exception.message}",
-                            Toast.LENGTH_LONG
+                            "${status}",
+                            Toast.LENGTH_SHORT
                         ).show()
                     }
                 }
 
             })
+
+            closeKeyboard()
 
         }
 
@@ -82,32 +98,39 @@ class LoginFragment : Fragment() {
 
     }
 
-    private fun login():LiveData<Result<Response<SignInResponse>>>{
+    private fun login():LiveData<Result<SignInResponse>>{
 
         var loginBody = LoginBody()
 
-//        when {
-//            email_edit_text.editableText.toString().isEmpty() -> {
-//                email_edit_text.error = "Email cannot be empty"
-//            }
+        when {
+            email_edit_text.editableText.toString().isEmpty() -> {
+                email_edit_text.error = "Email cannot be empty"
+            }
 //            InputUtils.validateEmail(email_edit_text.editableText.toString()) -> {
 //                email_edit_text.error = "Email not valid"
 //            }
-//            password_edit_text.editableText.toString().isEmpty() -> {
-//                password_edit_text.error = "Password cannot be empty"
-//            }
-//            else -> {
-//                val email = email_edit_text.editableText.toString()
+            password_edit_text.editableText.toString().isEmpty() -> {
+                password_edit_text.error = "Password cannot be empty"
+            }
+            else -> {
+                val email = email_edit_text.editableText.toString()
+                val password = password_edit_text.editableText.toString()
+                loginBody = LoginBody(email, password)
+            }
+        }
+//        val email = email_edit_text.editableText.toString()
 //                val password = password_edit_text.toString()
 //                loginBody = LoginBody(email, password)
-//            }
-//        }
-        val email = email_edit_text.editableText.toString()
-                val password = password_edit_text.toString()
-                loginBody = LoginBody(email, password)
 
         return viewModel.signedIn(loginBody)
 
+
+    }
+
+    private fun closeKeyboard(){
+
+        val imm = ContextCompat.getSystemService(requireContext(), InputMethodManager::class.java)
+        imm?.hideSoftInputFromWindow(view?.windowToken,0)
 
     }
 

@@ -16,7 +16,7 @@ class NetworkRepository: BaseRepository() {
 
     val TAG = "NETWORK REPOSITORY"
 
-    suspend fun getSignInResponse(body: LoginBody): Result<Response<SignInResponse>>{
+    suspend fun getSignInResponse(body: LoginBody): Result<SignInResponse>{
 
         return withContext(Dispatchers.IO){
 

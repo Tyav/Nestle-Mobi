@@ -42,6 +42,9 @@
                 android:layout_marginEnd="24dp"
                 android:theme="@style/EditTextHint"
                 android:layout_weight="0"
+                app:errorTextAppearance="@style/error_appearance"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -52,7 +55,9 @@
                     android:hint="@string/email_address_hint"
                     android:inputType="textEmailAddress"
                     android:paddingTop="25dp"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -64,6 +69,7 @@
                 android:theme="@style/EditTextHint"
                 app:passwordToggleEnabled="true"
                 android:layout_weight="0"
+                app:boxStrokeColor="@color/colorPrimaryDark"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText

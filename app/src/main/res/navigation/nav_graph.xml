@@ -13,15 +13,16 @@
         <action
             android:id="@+id/action_loginFragment_to_nescafeKitchen"
             app:destination="@id/nescafeKitchen" />
-        <action
-            android:id="@+id/action_loginFragment_to_vendorProfile"
-            app:destination="@id/vendorProfile" />
     </fragment>
     <fragment
         android:id="@+id/nescafeKitchen"
         android:name="com.example.nescafe_pushcart.ui.NescafeKitchen"
         android:label="fragment_nescafe_kitchen"
-        tools:layout="@layout/fragment_nescafe_kitchen" />
+        tools:layout="@layout/fragment_nescafe_kitchen" >
+        <action
+            android:id="@+id/action_nescafeKitchen_to_vendorProfile"
+            app:destination="@id/vendorProfile" />
+    </fragment>
     <fragment
         android:id="@+id/vendorProfile"
         android:name="com.example.nescafe_pushcart.ui.VendorProfile"

@@ -20,12 +20,12 @@ class SignInViewModel: ViewModel() {
     private val viewModelScope = CoroutineScope(job + Dispatchers.Main)
 
 
-    private val _userSignedInDetails = MutableLiveData<Result<Response<SignInResponse>>>()
-    val userSignedInDetails:LiveData<Result<Response<SignInResponse>>>
+    private val _userSignedInDetails = MutableLiveData<Result<SignInResponse>>()
+    val userSignedInDetails:LiveData<Result<SignInResponse>>
     get() = _userSignedInDetails
 
 
-    fun signedIn(body: LoginBody):LiveData<Result<Response<SignInResponse>>>{
+    fun signedIn(body: LoginBody):LiveData<Result<SignInResponse>>{
 
         viewModelScope.launch {
             _userSignedInDetails.value = repository.getSignInResponse(body)

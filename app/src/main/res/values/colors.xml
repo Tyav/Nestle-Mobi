@@ -14,4 +14,5 @@
     <color name="record_sales_heading">#fffcfc</color>
     <color name="add_to_your_sales">#ffe8e8</color>
     <color name="button_add_to_your_sales">#bdbdbd</color>
+    <color name="error">#ffffff</color>
 </resources>

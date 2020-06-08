@@ -16,7 +16,7 @@ interface LoginAPI {
     @POST(URLEndpoints.AUTHENTICATE_LOGIN_ENDPOINT)
    suspend fun loginAsync(
         @Body body:LoginBody
-    ): Response<SignInResponse>
+    ): SignInResponse
 
 
     companion object {
