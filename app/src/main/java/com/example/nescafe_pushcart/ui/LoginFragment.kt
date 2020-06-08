@@ -81,7 +81,7 @@ class LoginFragment : Fragment() {
                         Log.d(TAG, "check here in status:${status}")
                         Toast.makeText(
                             context,
-                            "${status}",
+                            "${it.exception.message}",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
