@@ -73,15 +73,23 @@ class LoginFragment : Fragment() {
                     is Result.Error -> {
                         userLoginProgressBar.visibility = View.GONE
                         var status:String? = ""
-                        Log.d(TAG, "check inside exception: ${it.exception.message}")
-//                        if (it.exception.message == "HTTP 422"){
-//                            status = "No record found"
-//                        }
+//                        Log.d(TAG, "check inside exception: ${it.exception.message} == HTTP 422")
+//                        Log.i(TAG,(it.exception.message?.trim() == "HTTP 422").toString())
+//                        Log.i(TAG,(it.exception.message).toString())
+                        if (it.exception.message?.trim() == "HTTP 422"){
+                            status = "No record found"
+                        } else if(it.exception.message?.trim() == "timeout"){
+                            status = "No network"
+                        } else if (it.exception.message?.trim() == "HTTP 400"){
+                            status = "Incomplete login details"
+                        } else if (it.exception.message?.trim() == "Unable to resolve host\"dnestle.herokuapp.com\":No address associated with hostname"){
+                            status = "Please check network connection"
+                        }
 //                        status = "No record found"
                         Log.d(TAG, "check here in status:${status}")
                         Toast.makeText(
                             context,
-                            "${it.exception.message}",
+                            "${status}",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
