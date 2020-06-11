@@ -2,6 +2,8 @@ package com.example.nescafe_pushcart.ui
 
 import android.content.Context
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +17,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.nescafe_pushcart.R
+import com.example.nescafe_pushcart.helpers.IsEmptyCheck
 import com.example.nescafe_pushcart.model.login.LoginBody
 import com.example.nescafe_pushcart.model.login.SignInResponse
 import com.example.nescafe_pushcart.utils.InputUtils
@@ -27,6 +30,9 @@ import retrofit2.Response
  * A simple [Fragment] subclass.
  */
 class LoginFragment : Fragment() {
+
+    private lateinit var email:String
+    private lateinit var password:String
 
     val TAG = "LOGIN_FRAGMENT"
     lateinit var viewModel:SignInViewModel
@@ -50,6 +56,8 @@ class LoginFragment : Fragment() {
 
 
         login_btn.setOnClickListener {
+
+
 
             userLoginProgressBar.visibility = View.VISIBLE
 
@@ -108,27 +116,46 @@ class LoginFragment : Fragment() {
 
     private fun login():LiveData<Result<SignInResponse>>{
 
-        var loginBody = LoginBody()
-
-        when {
-            email_edit_text.editableText.toString().isEmpty() -> {
-                email_edit_text.error = "Email cannot be empty"
-            }
-//            InputUtils.validateEmail(email_edit_text.editableText.toString()) -> {
-//                email_edit_text.error = "Email not valid"
+//        var loginBody = LoginBody()
+//
+//        val value = IsEmptyCheck(email_edit_text, password_edit_text)
+//        val emailAddress = email_edit_text.text.toString().trim()
+//        val passwordString = password_edit_text.text.toString().trim()
+//
+//        if (value){
+//            val validation = IsEmptyCheck.fieldsValidation(emailAddress, passwordString)
+//
+//            if (validation != "true"){
+//                Toast.makeText(context, validation, Toast.LENGTH_LONG).show()
+//            } else {
+//                loginBody = LoginBody(emailAddress,passwordString)
+//                login_btn.isClickable = true
 //            }
-            password_edit_text.editableText.toString().isEmpty() -> {
-                password_edit_text.error = "Password cannot be empty"
-            }
-            else -> {
-                val email = email_edit_text.editableText.toString()
-                val password = password_edit_text.editableText.toString()
-                loginBody = LoginBody(email, password)
-            }
-        }
+//        } else {
+//            login_btn.isClickable = false
+//        }
+
+//        when {
+//            email_edit_text.editableText.toString().isEmpty() -> {
+//                email_edit_text.error = "Email cannot be empty"
+//            }
+////            InputUtils.validateEmail(email_edit_text.editableText.toString()) -> {
+////                email_edit_text.error = "Email not valid"
+////            }
+//            password_edit_text.editableText.toString().isEmpty() -> {
+//                password_edit_text.error = "Password cannot be empty"
+//            }
+//            else -> {
+//                val email = email_edit_text.editableText.toString()
+//                val password = password_edit_text.editableText.toString()
+//                loginBody = LoginBody(email, password)
+//            }
+//        }
 //        val email = email_edit_text.editableText.toString()
 //                val password = password_edit_text.toString()
 //                loginBody = LoginBody(email, password)
+
+
 
         return viewModel.signedIn(loginBody)
 
@@ -141,6 +168,37 @@ class LoginFragment : Fragment() {
         imm?.hideSoftInputFromWindow(view?.windowToken,0)
 
     }
+
+    private fun getLoginInput(){
+        email = email_edit_text.editableText.toString()
+        password = password_edit_text.editableText.toString()
+    }
+
+    private fun setupTextChangeListeners(){
+        email_edit_text.addTextChangedListener( object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                viewModel.apply {
+                    email = s.toString()
+                }
+                when (viewModel.validateEmail()){
+                    2 -> {
+                        email_edit_text.error =
+                    }
+                }
+            }
+        })
+
+    }
+
+
 
 
 }

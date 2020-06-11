@@ -3,6 +3,7 @@ package com.example.nescafe_pushcart.viewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.nescafe_pushcart.helpers.Validator
 import com.example.nescafe_pushcart.model.login.LoginBody
 import com.example.nescafe_pushcart.model.login.SignInResponse
 import com.example.nescafe_pushcart.network.NetworkRepository
@@ -14,6 +15,11 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class SignInViewModel: ViewModel() {
+
+    val validator = Validator()
+
+    var email:String? = null
+    var password:String? = null
 
     private val repository = NetworkRepository()
     private val job = Job()
@@ -32,6 +38,28 @@ class SignInViewModel: ViewModel() {
         }
         return _userSignedInDetails
     }
+
+
+    fun validateEmail(): Int?{
+        return email?.let { email_ ->
+            when {
+                email_.isEmpty() -> 1
+                !validator.isValidEmail(email_) -> 2
+                else -> 0
+            }
+        }
+    }
+
+    fun validatePassword():Int?{
+        return password?.let { password_ ->
+            when {
+                password_.isEmpty() -> 1
+                !validator.isValidPassword(password_) -> 2
+                else -> 0
+            }
+        }
+    }
+
 
     override fun onCleared() {
         super.onCleared()
