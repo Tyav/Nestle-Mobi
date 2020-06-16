@@ -9,7 +9,7 @@ class Validator {
                     + "([0-9][0-9\\- \\.]+[0-9])")
         private const val EMAIL_PATTERN = "^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6})*\$"
         private const val PASSWORD_PATTERN =
-            "(?=(.[0-9]))((?=.[A-Za-z0-9])(?=.[A-Z])(?=.[a-z]))^.{8,}${'$'}"
+            """^[a-zA-Z0-9@$!%*#?&]{6,}$"""
         private const val NAME_PATTERN = "[a-zA-z .]{3,}"
     }
 
