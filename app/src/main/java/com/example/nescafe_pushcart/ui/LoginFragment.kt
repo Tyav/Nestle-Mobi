@@ -23,6 +23,7 @@ import com.example.nescafe_pushcart.model.login.LoginBody
 import com.example.nescafe_pushcart.model.login.SignInResponse
 import com.example.nescafe_pushcart.utils.InputUtils
 import com.example.nescafe_pushcart.utils.Result
+import com.example.nescafe_pushcart.utils.SessionManager
 import com.example.nescafe_pushcart.viewModel.SignInViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 import retrofit2.Response
@@ -35,6 +36,7 @@ class LoginFragment : Fragment() {
     private lateinit var email:String
     private lateinit var password:String
     private lateinit var binding: FragmentLoginBinding
+    private lateinit var sessionManager:SessionManager
 
     val TAG = "LOGIN_FRAGMENT"
     lateinit var viewModel:SignInViewModel
@@ -43,6 +45,8 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        sessionManager = SessionManager(requireContext())
 
         binding = FragmentLoginBinding.inflate(inflater, container, false)
 
@@ -76,6 +80,15 @@ class LoginFragment : Fragment() {
 
                         is Result.Success -> {
                             binding.userLoginProgressBar.visibility = View.GONE
+
+                            if (it.data.status == "OK"){
+                                val authKey:String = "${it.data.data?.token}"
+                                Log.i(TAG,"inside authKey:$authKey")
+                                sessionManager.saveAuthToken(authKey)
+                            }
+
+
+
                             if (findNavController().currentDestination?.id == R.id.loginFragment){
                                 findNavController().navigate(R.id.action_loginFragment_to_nescafeKitchen)
                                 Toast.makeText(context,"${it.data.message}", Toast.LENGTH_LONG).show()
