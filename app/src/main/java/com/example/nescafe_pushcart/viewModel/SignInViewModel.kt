@@ -1,5 +1,7 @@
 package com.example.nescafe_pushcart.viewModel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,14 +16,14 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
-class SignInViewModel: ViewModel() {
+class SignInViewModel(application: Application): AndroidViewModel(application) {
 
     val validator = Validator()
 
     var email:String? = null
     var password:String? = null
 
-    private val repository = NetworkRepository()
+    private val repository = NetworkRepository(getApplication())
     private val job = Job()
     private val viewModelScope = CoroutineScope(job + Dispatchers.Main)
 
