@@ -57,7 +57,7 @@ class NescafeKitchen : Fragment() {
             when(it){
 
                 is Result.Success -> {
-                    it.data.data?.content?.let {
+                    it.data?.let {
                         adapter.submitList(it)
                     }
                 }

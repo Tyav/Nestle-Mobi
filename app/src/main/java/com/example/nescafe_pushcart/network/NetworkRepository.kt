@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import com.example.nescafe_pushcart.api.LoginAPI
 import com.example.nescafe_pushcart.api.VendorListAPI
+import com.example.nescafe_pushcart.model.listofvendors.Content
 import com.example.nescafe_pushcart.model.listofvendors.VendorList
 import com.example.nescafe_pushcart.model.login.LoginBody
 import com.example.nescafe_pushcart.model.login.SignInResponse
