@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
-            name="VendorList"
-            type="com.example.nescafe_pushcart.model.listofvendors.VendorList" />
+            name="Content"
+            type="com.example.nescafe_pushcart.model.listofvendors.Content" />
     </data>
 
     <RelativeLayout
@@ -48,7 +49,9 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:fontFamily="@font/coustard"
-                android:text="@string/vendor_name" />
+                android:text="@{Content.firstName}"
+                tools:text="@string/vendor_name"
+                />
 
             <TextView
                 android:layout_width="match_parent"

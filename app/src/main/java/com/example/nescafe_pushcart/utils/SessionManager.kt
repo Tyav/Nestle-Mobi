@@ -22,7 +22,7 @@ class SessionManager(context: Context) {
 
     fun saveAuthToken(token:String){
         val editor = prefs.edit()
-        editor.putString(USER_TOKEN, "user token")
+        editor.putString(USER_TOKEN, token)
         editor.apply()
 
     }

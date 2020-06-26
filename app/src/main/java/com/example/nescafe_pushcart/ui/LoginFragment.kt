@@ -24,6 +24,7 @@ import com.example.nescafe_pushcart.model.login.SignInResponse
 import com.example.nescafe_pushcart.utils.InputUtils
 import com.example.nescafe_pushcart.utils.Result
 import com.example.nescafe_pushcart.utils.SessionManager
+import com.example.nescafe_pushcart.viewModel.NescafeKitchenViewModel
 import com.example.nescafe_pushcart.viewModel.SignInViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 import retrofit2.Response
@@ -32,6 +33,8 @@ import retrofit2.Response
  * A simple [Fragment] subclass.
  */
 class LoginFragment : Fragment() {
+
+    private lateinit var nescafeViewModel:NescafeKitchenViewModel
 
     private lateinit var email:String
     private lateinit var password:String
@@ -52,6 +55,10 @@ class LoginFragment : Fragment() {
 
         // initialize the viewModel
         viewModel = ViewModelProvider(this).get(SignInViewModel::class.java)
+
+        // nescafe viewModel
+        nescafeViewModel = ViewModelProvider(this).get(NescafeKitchenViewModel::class.java)
+
         setupTextChangeListeners()
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_login, container, false)
@@ -92,6 +99,7 @@ class LoginFragment : Fragment() {
                             if (findNavController().currentDestination?.id == R.id.loginFragment){
                                 findNavController().navigate(R.id.action_loginFragment_to_nescafeKitchen)
                                 Toast.makeText(context,"${it.data.message}", Toast.LENGTH_LONG).show()
+                                nescafeViewModel.getVendorListNow()
                             }
 
                             }

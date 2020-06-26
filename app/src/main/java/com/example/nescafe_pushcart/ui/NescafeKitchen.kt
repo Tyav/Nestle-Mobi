@@ -1,6 +1,7 @@
 package com.example.nescafe_pushcart.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +22,8 @@ import com.example.nescafe_pushcart.viewModel.NescafeKitchenViewModel
  * A simple [Fragment] subclass.
  */
 class NescafeKitchen : Fragment() {
+
+    val TAG = "NESCAFEKITCHEN"
 
     lateinit var viewModel: NescafeKitchenViewModel
 
@@ -57,8 +60,9 @@ class NescafeKitchen : Fragment() {
             when(it){
 
                 is Result.Success -> {
-                    it.data?.let {
+                    it.data.data?.content.let {
                         adapter.submitList(it)
+                        Log.d(TAG, "What is inside here:$it")
                     }
                 }
 
