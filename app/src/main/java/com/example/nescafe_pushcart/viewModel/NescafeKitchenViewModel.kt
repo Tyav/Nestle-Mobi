@@ -25,6 +25,13 @@ class NescafeKitchenViewModel(application: Application): AndroidViewModel(applic
     val myVendorList:LiveData<Result<VendorList>>
     get() = _myVendorList
 
+    // it when I initialized this "getVendorListNow()" that was whwn the
+    // items in the recyclerview displayed
+
+    init {
+        getVendorListNow()
+    }
+
 
 
     fun getVendorListNow():LiveData<Result<VendorList>>{

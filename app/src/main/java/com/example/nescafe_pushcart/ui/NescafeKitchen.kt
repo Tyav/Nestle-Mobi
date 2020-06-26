@@ -61,6 +61,7 @@ class NescafeKitchen : Fragment() {
 
                 is Result.Success -> {
                     it.data.data?.content.let {
+                        Log.d(TAG, "checking his nescafe_kitchen_fragmet:$it")
                         adapter.submitList(it)
                         Log.d(TAG, "What is inside here:$it")
                     }
