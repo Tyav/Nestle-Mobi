@@ -87,20 +87,39 @@ class LoginFragment : Fragment() {
 
                         is Result.Success -> {
                             binding.userLoginProgressBar.visibility = View.GONE
-
+                            /*
+                            Capture the user token
+                             */
                             if (it.data.status == "OK"){
                                 val authKey:String = "${it.data.data?.token}"
                                 Log.i(TAG,"inside authKey:$authKey")
                                 sessionManager.saveAuthToken(authKey)
                             }
 
+                            /*
+                            Validate user; as an ADMIN or as a VENDOR
+                             */
 
+                            var roleCollection = it.data.data?.roles
 
-                            if (findNavController().currentDestination?.id == R.id.loginFragment){
-                                findNavController().navigate(R.id.action_loginFragment_to_nescafeKitchen)
-                                Toast.makeText(context,"${it.data.message}", Toast.LENGTH_LONG).show()
-                                nescafeViewModel.getVendorListNow()
+                            for(item in roleCollection!!){
+                                var myObj = item
+                                if(myObj?.name == "VENDOR"){
+                                    if (findNavController().currentDestination?.id == R.id.loginFragment){
+                                        findNavController().navigate(R.id.action_loginFragment_to_vendorAuthFragment)
+                                    }
+                                } else if (myObj?.name == "ADMIN"){
+                                    if (findNavController().currentDestination?.id == R.id.loginFragment){
+                                        findNavController().navigate(R.id.action_loginFragment_to_nescafeKitchen)
+                                        Toast.makeText(context,"${it.data.message}", Toast.LENGTH_LONG).show()
+                                        nescafeViewModel.getVendorListNow()
+                                    }
+                                }
                             }
+
+
+
+
 
                             }
                         is Result.Error -> {

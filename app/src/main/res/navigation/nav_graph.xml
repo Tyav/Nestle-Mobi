@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginFragment_to_nescafeKitchen"
             app:destination="@id/nescafeKitchen" />
+        <action
+            android:id="@+id/action_loginFragment_to_vendorAuthFragment"
+            app:destination="@id/vendorAuthFragment" />
     </fragment>
     <fragment
         android:id="@+id/nescafeKitchen"

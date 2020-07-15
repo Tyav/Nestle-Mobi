@@ -39,6 +39,9 @@ class NescafeKitchenAdapter(val onClickListener:OnClickListener):ListAdapter<Con
 
     override fun onBindViewHolder(holder: NescafeKitchenViewHolder, position: Int) {
         val vendorList = getItem(position)
+        holder.itemView.setOnClickListener {
+            onClickListener.onClick(vendorList)
+        }
 
         holder.bind(vendorList)
 
