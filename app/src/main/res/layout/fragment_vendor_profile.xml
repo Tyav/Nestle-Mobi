@@ -5,6 +5,9 @@
 
     <data>
         <variable
+            name="Content"
+            type="com.example.nescafe_pushcart.model.listofvendors.Content" />
+        <variable
             name="Sales"
             type="com.example.nescafe_pushcart.model.Sales" />
     </data>
@@ -43,10 +46,12 @@
                         android:layout_alignParentEnd="true"
                         android:fontFamily="@font/muli_bold"
                         android:gravity="center"
-                        android:text="@string/vendor_name"
+                        android:text="@{Content.firstName}"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/vendor_name_vp_size"
-                        android:layout_marginTop="43dp" />
+                        android:layout_marginTop="43dp"
+                        tools:text="@string/vendor_name"
+                        />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"

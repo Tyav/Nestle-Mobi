@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -22,6 +23,8 @@ class VendorProfile : Fragment() {
 
     private lateinit var binding: FragmentVendorProfileBinding
     private lateinit var adapter: SalesAdapter
+
+    val args:VendorProfileArgs by navArgs()
     
 
     override fun onCreateView(
@@ -51,6 +54,8 @@ class VendorProfile : Fragment() {
         })
         recyclerView.adapter = adapter
         adapter.submitList(salesRecord)
+
+        binding.content = args.Content
 
 
         return binding.root

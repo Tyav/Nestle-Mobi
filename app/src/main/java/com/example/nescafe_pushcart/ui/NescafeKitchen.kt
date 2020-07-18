@@ -13,7 +13,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-import com.example.nescafe_pushcart.R
 import com.example.nescafe_pushcart.adapter.NescafeKitchenAdapter
 import com.example.nescafe_pushcart.databinding.FragmentNescafeKitchenBinding
 import com.example.nescafe_pushcart.utils.Result
@@ -52,7 +51,8 @@ class NescafeKitchen : Fragment() {
 
         adapter = NescafeKitchenAdapter(
             NescafeKitchenAdapter.OnClickListener {
-                findNavController().navigate(NescafeKitchenDirections.actionNescafeKitchenToVendorProfile())
+                val action = NescafeKitchenDirections.actionNescafeKitchenToVendorProfile(it)
+                findNavController().navigate(action)
             }
         )
 

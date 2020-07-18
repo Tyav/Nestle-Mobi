@@ -12,10 +12,14 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_nescafeKitchen"
-            app:destination="@id/nescafeKitchen" />
+            app:destination="@id/nescafeKitchen"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_loginFragment_to_vendorAuthFragment"
-            app:destination="@id/vendorAuthFragment" />
+            app:destination="@id/vendorAuthFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/nescafeKitchen"
@@ -34,6 +38,9 @@
         <action
             android:id="@+id/action_vendorProfile_to_vendorAuthFragment"
             app:destination="@id/vendorAuthFragment" />
+        <argument
+            android:name="Content"
+            app:argType="com.example.nescafe_pushcart.model.listofvendors.Content" />
     </fragment>
     <fragment
         android:id="@+id/vendorAuthFragment"
